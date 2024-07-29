@@ -1,0 +1,124 @@
+body{
+    background-color: rgb(240, 205, 211);
+}
+h1{
+    text-align: center;
+}
+.container1{
+    flex-direction: row-reverse;
+    animation: box1 7s linear infinite;
+}
+.container div{
+    height: 100px;
+    width: 50px;
+    background-color:rgb(11, 5, 41);
+}
+h3{
+    text-align:center;
+    color:rgb(6, 28, 56);
+}
+.container{
+    overflow: hidden;
+    height:200px;
+    width:auto;
+    border:2px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 4px;
+}
+.container2{
+    align-items: center;
+    flex-wrap:wrap;
+    animation: box2 7s linear infinite;
+}
+.container3{
+    justify-content: space-between;
+    flex-wrap:wrap-reverse;
+    animation: box3 8s linear infinite;
+}
+.container4{
+    align-content: flex-end;
+    flex-wrap:wrap-reverse;
+    animation: box4 8s linear infinite;
+}
+.container5 div:nth-child(even){
+    flex-grow: 2;
+    align-items: flex-end;
+}
+.container6 div:nth-child(odd){
+    flex-shrink: 2;
+}
+.container7 div:nth-child(6){
+    flex-basis: 800px;
+}
+
+
+@keyframes box1{
+    0%, 16.67%  {
+        flex-direction: row-reverse;
+    }
+    45% { 
+        flex-direction: row;
+    }
+    70% {
+        flex-direction: column-reverse;
+    }
+    100% {
+        flex-direction: column;
+    }
+}
+@keyframes box2{
+    0%, 16.67% {
+        align-items: flex-start;
+    }
+    45% { 
+        align-items: center;
+    }
+    70% {
+        align-items: flex-end;
+    }
+    100% {
+        align-items: stretch;
+    }
+}
+@keyframes box3 {
+    0%, 16.67% {
+        justify-content: flex-start;
+    }
+    33.33% {
+        justify-content: center;
+    }
+    50% {
+        justify-content: flex-end;
+    }
+    66.67% {
+        justify-content: space-between;
+    }
+    83.33% {
+        justify-content: space-around;
+    }
+    100% {
+        justify-content: space-evenly;
+    }
+}
+@keyframes box4 {
+    0%, 16.67% {
+        align-content: flex-start;
+    }
+    33.33% {
+        align-content: center;
+    }
+    50% {
+        align-content: flex-end;
+    }
+    66.67% {
+        align-content: space-between;
+    }
+    83.33% {
+        align-content: space-around;
+    }
+    100% {
+        align-content: stretch;
+    }
+}
